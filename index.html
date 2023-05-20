@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script type="module" src="./APIScript.js"></script>
+    <link rel="icon" type="image" href="./images/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <style>
+      #weather-table {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        height: 405px;
+      }
+      #weather-table td {
+        padding: 20px;
+        background-color: #222831;
+        border-radius: 7px;
+      }
+      #map {
+        margin: 0 auto;
+        height: 423px;
+        width: 100%;
+        border-radius: 7px;
+        border: #bbd2f3 3px solid;
+        margin-bottom: 5px;
+      }
+    </style>
+
+    <link rel="stylesheet" href="./myst.css" />
+  </head>
+
+  <body
+    style="
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+      background-color: #222831;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.43);
+    "
+  >
+    <div id="content">
+      <div class="row">
+        <div id="logo-bar" class="col-6 col-s-12 col-ss-12">
+          <div class="col-4 logo-img"></div>
+          <div id="logo-writing" class="col-8">
+            <h1 class="shadow-effect">Weather Wise</h1>
+            <h3>Stay Informed, Forcasting Transformed!</h3>
+          </div>
+        </div>
+
+        <div id="links-bar" class="col-6 col-s-12 col-ss-12">
+          <div id="links" class="col-6 col-ss-12">
+            <div id="services" class="col-6 dropdown">
+              <a href="#">Services</a>
+              <div class="dropdown-content">
+                <a href="login.html" class="lgn">Login</a>
+                <a href="about-us.html">About us</a>
+                <a href="credits.html">Credits</a>
+              </div>
+            </div>
+            <div id="contact-us" class="col-6">
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div id="clock" class="col-6 col-ss-12">
+            <h1 id="time" class="shadow-effect" style="font-size: 42px">
+              10:00 PM
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12" id="location-wrapper">
+        <div class="col-4 col-s-2 col-ss-0"></div>
+        <div class="col-4 col-s-8 col-ss-12" style="text-align: center">
+          <p id="address">Loading... Please Wait</p>
+        </div>
+        <div class="col-4 col-s-2 col-ss-0"></div>
+      </div>
+
+      <div id="weather-wrapper" class="row" style="padding: 20px">
+        <div class="col-1 col-ss-0"></div>
+        <div id="weather" class="col-10 col-ss-12">
+          <div class="col-6 col-ss-12 col-s-12">
+            <div id="map"></div>
+            <div class="col-4 col-s-3 col-ss-2"></div>
+            <div class="col-4 col-s-6 col-ss-8">
+              <button
+                id="mapButton"
+                style="
+                  /* padding: 9px 16px; */
+                  width: 100%;
+                  height: 50px;
+                  border-radius: 12px;
+                  background-color: rgba(0, 0, 0, 0.3);
+                  color: #ffffff;
+                  font-size: 15px;
+                  font-weight: bolder;
+                  text-align: center;
+                "
+              >
+                Update!
+              </button>
+            </div>
+            <div class="col-4 col-s-3 col-ss-2"></div>
+          </div>
+          <div style="padding: 15px">
+            <div id="weather-data" class="col-6 col-ss-12 col-s-12">
+              <table id="weather-table">
+                <tr>
+                  <td id="t0">Monday 24 Augest 10:00 PM</td>
+                  <td id="w0">Loading...</td>
+                </tr>
+                <tr>
+                  <td id="t1">10:00 PM</td>
+                  <td id="w1">Loading...</td>
+                </tr>
+                <tr>
+                  <td id="t2">10:00 PM</td>
+                  <td id="w2">Loading...</td>
+                </tr>
+                <tr>
+                  <td id="t3">10:00 PM</td>
+                  <td id="w3">Loading...</td>
+                </tr>
+                <tr>
+                  <td id="t4">10:00 PM</td>
+                  <td id="w4">Loading...</td>
+                </tr>
+                <tr>
+                  <td id="t5">10:00 PM</td>
+                  <td id="w5">Loading...</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-1 col-ss-0"></div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="col-4 col-s-2 col-ss-0"></div>
+          <div class="col-4 col-s-8 col-ss-12">
+            <footer class="footer">
+              &copy; 2023 WeatherWise, All rights reserved.
+            </footer>
+          </div>
+          <div class="col-4 col-s-2 col-ss-0"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"
+    />
+  </body>
+</html>
