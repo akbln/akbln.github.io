@@ -1,2 +1,2 @@
 # akbln.github.io
-Basic Website Project using free, and open source APIs
+Basic weather website Project using free, and open source APIs
