@@ -254,18 +254,18 @@
 }
 .submit {
   padding: 15px 0;
-  background-color: #cacaad;
+  background-color: #ffffff;
   text-align: center;
   border-radius: 8px;
   width: 100%;
   font-size: 20px;
   font-weight: bolder;
-  color: #000000;
+  color: #393e46;
   /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); */
 }
 .submit:hover {
-  background-color: #4b4b4a;
-  color: #ffffff;
+  background-color: #4d525b;
+  color: #cccccc;
   border: #8f8f8f 2px solid;
   text-shadow: 2px 2px 2px rgba(255, 255, 255, 0);
 }
