@@ -220,7 +220,7 @@
   text-align: center;
 }
 
-#contact {
+# {
   background-color: #393e46;
   border-radius: 7px;
   height: 100%;
@@ -251,6 +251,7 @@
 }
 #contact-message {
   height: 200px;
+  resize: none;
 }
 .submit {
   padding: 15px 0;
