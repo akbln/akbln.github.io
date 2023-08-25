@@ -1,4 +1,4 @@
-function setCookie(cookieName, cookieValue, expirationDays) {
+export function setCookie(cookieName, cookieValue, expirationDays) {
   const expirationDate = new Date();
   expirationDate.setDate(expirationDate.getDate() + expirationDays);
 
@@ -8,11 +8,11 @@ function setCookie(cookieName, cookieValue, expirationDays) {
   document.cookie = cookieString;
 }
 
-function deleteCookie(cookieName) {
+export function deleteCookie(cookieName) {
   setCookie(cookieName, null, null);
 }
 
-function getCookie(cookieName) {
+export function getCookie(cookieName) {
   const decoded = decodeURIComponent(document.cookie);
   const cookies = decoded.split("; ");
   for (let i = 0; i < cookies.length; i++) {
@@ -23,22 +23,3 @@ function getCookie(cookieName) {
   }
   return null;
 }
-let mode = false;
-let darkToggle = document.getElementById("dark-check");
-
-
-function getMode() {
-  const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (darkMode) {
-    mode = true;
-    darkToggle.checked = true;
-  }
-}
-getMode();
-darkToggle.addEventListener('change', function() {
-  if (this.checked) {
-    console.log("checked")
-  } else {
-    console.log("off now")
-  }
-});

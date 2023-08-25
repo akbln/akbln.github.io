@@ -1,0 +1,86 @@
+#logo-writing {
+  color: azure;
+}
+
+#links a {
+  background-color: #161b22;
+  color: azure;
+}
+
+#links a:hover {
+  background-color: aliceblue;
+  color: black;
+}
+#clock {
+  color: azure;
+}
+.dropdown-content {
+  background-color: #393e46;
+}
+.dropdown-content a {
+  color: #333;
+}
+#address {
+  color: #ffffff;
+}
+#weather-data {
+  color: azure;
+  background-color: #161b22;
+}
+.standard-input {
+  border: #2c2a2a 2px solid;
+  background-color: #e1ebfa;
+}
+.standard-input:hover {
+  color: #ffffff;
+}
+#select-menu {
+  background-color: #e1ebfa;
+  border: #2c2a2a 2px solid;
+  color: black;
+}
+.submit {
+  color: #393e46;
+  background-color: #ffffff;
+}
+.submit:hover {
+  background-color: #4d525b;
+  color: #cccccc;
+  border: #8f8f8f 2px solid;
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0);
+}
+.padding {
+  color: #ffffff;
+}
+#about-us {
+  color: #ffffff;
+}
+#about-us-img {
+  border: #ffffff 2px solid;
+}
+#credits {
+  color: #ffffff;
+}
+#credits a {
+  color: rgb(110, 236, 215);
+}
+#credits a:hover {
+  color: #ffffff;
+}
+#login {
+  background-color: #393e46;
+}
+.login-input {
+  background-color: #e1ebfa;
+  border: #2c2a2a 2px solid;
+}
+#register {
+  background-color: #393e46;
+}
+#newsletter-wrapper {
+  color: #ffffff;
+}
+.footer {
+  background-color: #161b22;
+  color: #ffffff;
+}
