@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <script type="module" src="./APIScript.js"></script>
+    <script type="module" src="./cookieManager.js"></script>
     <link rel="icon" type="image" href="./images/favicon.png" />
     <link
       rel="stylesheet"
@@ -37,7 +38,7 @@
         height: 423px;
         width: 100%;
         border-radius: 7px;
-        border: #bbd2f3 3px solid;
+        border: #161b22 3px solid;
         margin-bottom: 5px;
       }
     </style>
@@ -49,8 +50,8 @@
     style="
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
         sans-serif;
-      background-color: #222831;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.43);
+      background-color: #0d1117;
+      font-weight: bolder;
     "
   >
     <div id="content">
@@ -96,7 +97,7 @@
       <div id="weather-wrapper" class="row" style="padding: 20px">
         <div class="col-1 col-ss-0"></div>
         <div id="weather" class="col-10 col-ss-12">
-          <div class="col-6 col-ss-12 col-s-12">
+          <div id="map-wrapper" class="col-6 col-ss-12 col-s-12">
             <div id="map"></div>
             <div class="col-4 col-s-3 col-ss-2"></div>
             <div class="col-4 col-s-6 col-ss-8">
@@ -107,7 +108,7 @@
                   width: 100%;
                   height: 50px;
                   border-radius: 12px;
-                  background-color: rgba(0, 0, 0, 0.3);
+                  background-color: #161b22;
                   color: #ffffff;
                   font-size: 15px;
                   font-weight: bolder;
@@ -123,27 +124,27 @@
             <div id="weather-data" class="col-6 col-ss-12 col-s-12">
               <table id="weather-table">
                 <tr>
-                  <td id="t0">Monday 24 Augest 10:00 PM</td>
+                  <td id="t0">Time</td>
                   <td id="w0">Loading...</td>
                 </tr>
                 <tr>
-                  <td id="t1">10:00 PM</td>
+                  <td id="t1">Time</td>
                   <td id="w1">Loading...</td>
                 </tr>
                 <tr>
-                  <td id="t2">10:00 PM</td>
+                  <td id="t2">Time</td>
                   <td id="w2">Loading...</td>
                 </tr>
                 <tr>
-                  <td id="t3">10:00 PM</td>
+                  <td id="t3">Time</td>
                   <td id="w3">Loading...</td>
                 </tr>
                 <tr>
-                  <td id="t4">10:00 PM</td>
+                  <td id="t4">Time</td>
                   <td id="w4">Loading...</td>
                 </tr>
                 <tr>
-                  <td id="t5">10:00 PM</td>
+                  <td id="t5">Time</td>
                   <td id="w5">Loading...</td>
                 </tr>
               </table>
@@ -152,6 +153,7 @@
         </div>
         <div class="col-1 col-ss-0"></div>
       </div>
+
       <div class="row">
         <div class="col-12">
           <div class="col-4 col-s-2 col-ss-0"></div>
@@ -159,6 +161,17 @@
             <footer class="footer">
               &copy; 2023 WeatherWise, All rights reserved.
             </footer>
+            <div class="toggle-dark-wrapper">
+              <div class="col-4"></div>
+              <div class="toggle-dark-container col-4">
+                <label class="switch">
+                  <input type="checkbox" id="dark-check" />
+                  <span class="slider round"></span>
+                </label>
+                <p style="padding: 5px">Dark Mode</p>
+              </div>
+              <div class="col-4"></div>
+            </div>
           </div>
           <div class="col-4 col-s-2 col-ss-0"></div>
         </div>
