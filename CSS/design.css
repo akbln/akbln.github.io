@@ -11,7 +11,7 @@ body {
 
 .logo-img {
   object-fit: cover;
-  background-image: url("./images/logo.png");
+  background-image: url("./Images/logo.png");
   min-height: 100px;
   background-size: contain;
   background-repeat: no-repeat;
