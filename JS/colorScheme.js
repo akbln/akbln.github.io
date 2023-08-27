@@ -1,10 +1,9 @@
-import { getCookie } from "./cookieManager.js";
-import { setCookie } from "./cookieManager.js";
+import { getCookie } from "./mgr.js";
+import { setCookie } from "./mgr.js";
 
 let colorScheme = null;
 const darkToggle = document.getElementById("dark-check");
 
-console.log(getCookie("colorScheme"));
 if (getCookie("colorScheme") == null) {
   getMode();
 } else {
@@ -16,7 +15,6 @@ if (getCookie("colorScheme") == null) {
       ? (darkToggle.checked = true)
       : (darkToggle.checked = false);
   }
-  console.log(colorScheme);
 }
 
 function getMode() {
@@ -36,11 +34,9 @@ applyMode(colorScheme);
 if (darkToggle !== null) {
   darkToggle.addEventListener("change", function () {
     if (this.checked) {
-      console.log("checked");
       applyMode("darkColorScheme");
       setCookie("colorScheme", "darkColorScheme", 365);
     } else {
-      console.log("off now");
       applyMode("lightColorScheme");
       setCookie("colorScheme", "lightColorScheme", 365);
     }
@@ -59,13 +55,13 @@ function removeStylesheetByHref(href) {
 }
 
 function applyMode(mode) {
-  removeStylesheetByHref(`./${colorScheme}.css`);
+  removeStylesheetByHref(`./CSS/${colorScheme}.css`);
 
   colorScheme = mode;
 
   let linkElement = document.createElement("link");
   linkElement.rel = "stylesheet";
   linkElement.type = "text/css";
-  linkElement.href = `./${mode}.css`;
+  linkElement.href = `./CSS/${mode}.css`;
   document.head.appendChild(linkElement);
 }

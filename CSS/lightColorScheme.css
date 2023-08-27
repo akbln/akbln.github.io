@@ -1,0 +1,112 @@
+body{
+  background-color: #f7f7f7;
+  color: #333333;
+}
+/* body p {
+  color: #333333;
+} */
+
+#logo-writing {
+  color: #333333;
+}
+
+#gender{
+  color: #333333;
+}
+
+#mapButton {
+  background-color: #e7ebff;
+  color: #333333;
+}
+#weather-table  td {
+  background-color: #e7ebff;
+}
+
+#links a {
+  background-color: #72bdef;
+  color: #333333;
+  border:#222831 2px solid;
+}
+
+#links a:hover {
+  background-color: #e7ebff;
+  color: black;
+}
+#clock {
+  color: #333333;
+}
+.dropdown-content {
+  background-color: #37373d;
+}
+.dropdown-content a {
+  color: #333333;
+}
+#address {
+  color: #333333;
+}
+#weather-data {
+  color: #333333;
+  background-color: #72bdef;
+  border: #161b22 px solid;
+}
+.standard-input {
+  border: #2c2a2a 2px solid;
+  background-color: #e1ebfa;
+}
+.standard-input:hover {
+  color: #333333;
+}
+#select-menu {
+  background-color: #e1ebfa;
+  border: #2c2a2a 2px solid;
+  color: #333333;
+}
+.submit {
+  color: #333333;
+  background-color: #e7ebff;
+}
+.submit:hover {
+  background-color: #ffffff;
+  color: #333333;
+  border: #8f8f8f 2px solid;
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0);
+}
+.about-us-paragraph {
+  color: #333333;
+}
+#about-us {
+  color: #333333;
+}
+#about-us-img {
+  border: #ffffff 2px solid;
+}
+#credits {
+  color: #333333;
+}
+#credits a {
+  color: #72bdef;
+}
+#credits li a:hover {
+  color: #0047b1;
+}
+#login {
+  background-color: #72bdef;
+}
+.login-input {
+  background-color: #e1ebfa;
+  border: #2c2a2a 2px solid;
+}
+#register {
+  background-color: #72bdef;
+}
+#newsletter-wrapper {
+  color: #ffffff;
+}
+.footer {
+  background-color: #72bdef;
+  color: #222831;
+}
+#map {
+  border: #72bdef  3px solid;
+}
+
